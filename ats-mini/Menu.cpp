@@ -24,9 +24,10 @@ int bandIdx = 0;
 // Band limits are expanded to align with the nearest tuning scale mark
 Band bands[] =
 {
-  {"VHF",  FM_BAND_TYPE, FM,   6400, 10800, 10390, 2, 0, 0},
+  {"FM1",  FM_BAND_TYPE, FM,   8800, 10800, 10390, 2, 0, 0},
+  {"FM2",  FM_BAND_TYPE, FM,   6400, 10800, 10390, 2, 0, 0},
   // All band. LW, MW and SW (from 150kHz to 30MHz)
-  {"ALL",  SW_BAND_TYPE, AM,    150, 30000, 15000, 1, 4, 0},
+  {"WB",  SW_BAND_TYPE, AM,    150, 30000, 15000, 1, 4, 0},
   {"11M",  SW_BAND_TYPE, AM,  25600, 26100, 25850, 1, 4, 0},
   {"13M",  SW_BAND_TYPE, AM,  21500, 21900, 21650, 1, 4, 0},
   {"15M",  SW_BAND_TYPE, AM,  18900, 19100, 18950, 1, 4, 0},
@@ -35,7 +36,7 @@ Band bands[] =
   {"22M",  SW_BAND_TYPE, AM,  13500, 13900, 13650, 1, 4, 0},
   {"25M",  SW_BAND_TYPE, AM,  11000, 13000, 11850, 1, 4, 0},
   {"31M",  SW_BAND_TYPE, AM,   9000, 11000,  9650, 1, 4, 0},
-  {"41M",  SW_BAND_TYPE, AM,   7000,  9000,  7300, 1, 4, 0},
+  {"41M",  SW_BAND_TYPE, AM,   7200,  7450,  7300, 1, 4, 0},
   {"49M",  SW_BAND_TYPE, AM,   5000,  7000,  6000, 1, 4, 0},
   {"60M",  SW_BAND_TYPE, AM,   4000,  5100,  4950, 1, 4, 0},
   {"75M",  SW_BAND_TYPE, AM,   3500,  4000,  3950, 1, 4, 0},
@@ -47,20 +48,20 @@ Band bands[] =
 //  {"60M",  SW_BAND_TYPE, AM,   4700,  5100,  4950, 1, 4, 0},
 //  {"75M",  SW_BAND_TYPE, AM,   3900,  4000,  3950, 1, 4, 0},
 //  {"90M",  SW_BAND_TYPE, AM,   3200,  3400,  3300, 1, 4, 0},
-  {"MW3",  MW_BAND_TYPE, AM,   1700,  3500,  2500, 1, 4, 0},
-  {"MW2",  MW_BAND_TYPE, AM,    495,  1701,   783, 2, 4, 0},
-  {"MW1",  MW_BAND_TYPE, AM,    150,  1800,   810, 3, 4, 0},
+//  {"MW3",  MW_BAND_TYPE, AM,   1700,  3500,  2500, 1, 4, 0},
+  {"MW",  MW_BAND_TYPE, AM,    531,  1701,   783, 2, 4, 0},
+  {"LW",  MW_BAND_TYPE, AM,    153,  279,   153, 3, 4, 0},
   {"160M", MW_BAND_TYPE, LSB,  1800,  2000,  1900, 5, 4, 0},
-  {"80M",  SW_BAND_TYPE, LSB,  3500,  4000,  3800, 5, 4, 0},
-  {"40M",  SW_BAND_TYPE, LSB,  7000,  7300,  7150, 5, 4, 0},
+  {"80M",  SW_BAND_TYPE, LSB,  3500,  3800,  3500, 5, 4, 0},
+  {"40M",  SW_BAND_TYPE, LSB,  7000,  7200,  7100, 5, 4, 0},
   {"30M",  SW_BAND_TYPE, LSB, 10000, 10200, 10125, 5, 4, 0},
-  {"20M",  SW_BAND_TYPE, USB, 14000, 14400, 14100, 5, 4, 0},
+  {"20M",  SW_BAND_TYPE, USB, 14000, 14350, 14100, 5, 4, 0},
   {"17M",  SW_BAND_TYPE, USB, 18000, 18200, 18115, 5, 4, 0},
   {"15M",  SW_BAND_TYPE, USB, 21000, 21500, 21225, 5, 4, 0},
   {"12M",  SW_BAND_TYPE, USB, 24800, 25000, 24940, 5, 4, 0},
   {"10M",  SW_BAND_TYPE, USB, 28000, 29700, 28500, 5, 4, 0},
   // https://www.hfunderground.com/wiki/CB
-  {"CB",   SW_BAND_TYPE, AM,  25000, 30000, 27135, 0, 4, 0},
+  {"CB",   SW_BAND_TYPE, AM,  26965, 27405, 27135, 0, 4, 0},
 };
 
 int getTotalBands() { return(ITEM_COUNT(bands)); }
