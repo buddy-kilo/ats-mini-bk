@@ -17,7 +17,7 @@
 #define FREQ_OFFSET_Y   62    // Frequency vertical offset
 #define FUNIT_OFFSET_X 255    // Frequency Unit horizontal offset
 #define FUNIT_OFFSET_Y  45    // Frequency Unit vertical offset
-#define BAND_OFFSET_X  150    // Band horizontal offset
+#define BAND_OFFSET_X  152    // Band horizontal offset
 #define BAND_OFFSET_Y    9    // Band vertical offset
 #define ALT_STEREO_OFFSET_X 232
 #define ALT_STEREO_OFFSET_Y 24
