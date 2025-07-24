@@ -18,7 +18,7 @@
 #define MIN_ELAPSED_TIME         5  // 300
 #define MIN_ELAPSED_RSSI_TIME  200  // RSSI check uses IN_ELAPSED_RSSI_TIME * 6 = 1.2s
 #define ELAPSED_COMMAND      10000  // time to turn off the last command controlled by encoder. Time to goes back to the VFO control // G8PTN: Increased time and corrected comment
-#define DEFAULT_VOLUME          35  // change it for your favorite sound volume
+#define DEFAULT_VOLUME          42  // change it for your favorite sound volume
 #define DEFAULT_SLEEP            0  // Default sleep interval, range = 0 (off) to 255 in steps of 5
 #define STRENGTH_CHECK_TIME   1500  // Not used
 #define RDS_CHECK_TIME         250  // Increased from 90
@@ -62,8 +62,8 @@ int8_t AmAvcIdx = 48;                   // Default AM  = 48 (as per AN332), rang
 int8_t SsbAvcIdx = 48;                  // Default SSB = 48, range = 12 to 90 in steps of 2
 
 // SoftMute index per mode (AM/SSB)
-int8_t AmSoftMuteIdx = 4;               // Default AM  = 4, range = 0 to 32
-int8_t SsbSoftMuteIdx = 4;              // Default SSB = 4, range = 0 to 32
+int8_t AmSoftMuteIdx = 0;               // Default AM  = 4, range = 0 to 32
+int8_t SsbSoftMuteIdx = 0;              // Default SSB = 4, range = 0 to 32
 
 // Menu options
 uint8_t volume = DEFAULT_VOLUME;        // Volume, range = 0 (muted) - 63
@@ -71,7 +71,7 @@ uint8_t currentSquelch = 0;             // Squelch, range = 0 (disabled) - 127
 bool squelchCutoff = false;             // True if the Squelch cutoff is in effect
 uint8_t FmRegionIdx = 0;                // FM Region
 
-uint16_t currentBrt = 130;              // Display brightness, range = 10 to 255 in steps of 5
+uint16_t currentBrt = 70;              // Display brightness, range = 10 to 255 in steps of 5
 uint16_t currentSleep = DEFAULT_SLEEP;  // Display sleep timeout, range = 0 to 255 in steps of 5
 long elapsedSleep = millis();           // Display sleep timer
 bool zoomMenu = false;                  // Display zoomed menu item
