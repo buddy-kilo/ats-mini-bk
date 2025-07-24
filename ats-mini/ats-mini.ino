@@ -278,19 +278,19 @@ void useBand(const Band *band)
   currentBFO = 0;
 
   if(band->bandMode==FM)
-  {
+{
     // rx.setMaxDelaySetFrequency(60);
     rx.setFM(band->minimumFreq, band->maximumFreq, band->currentFreq, getCurrentStep()->step);
     // rx.setTuneFrequencyAntennaCapacitor(0);
     rx.setSeekFmLimits(band->minimumFreq, band->maximumFreq);
 
     // FM Tweaks start
-    rx.setFmStereoOff();   // Some might not like this, but in such a small receiver, stereo isn't needed, in my opinion  
-    rx.setProperty(0x1105, 127); // Registers 0x11xx configure thresholds for hard "MONO" mode  
+    rx.setFmStereoOff();   // Some might not like this, but in such a small receiver, stereo isn't needed, in my opinion
+    rx.setProperty(0x1105, 127); // Registers 0x11xx configure thresholds for hard "MONO" mode
     rx.setProperty(0x1106, 127);
     rx.setProperty(0x1108, 33);
-    rx.setProperty(0x1300, 255); // Registers 0x1300 to 0x1305 configure SOFTMUTE mode. My observations: in urban conditions, FM stations are received reliably,  
-    rx.setProperty(0x1301, 4);  // and when tuning between stations, there's no characteristic hissing—almost complete silence  
+    rx.setProperty(0x1300, 255); // Registers 0x1300 to 0x1305 configure SOFTMUTE mode. My observations: in urban conditions, FM stations are received reliably,
+    rx.setProperty(0x1301, 4);  // and when tuning between stations, there's no characteristic hissing—almost complete silence
     rx.setProperty(0x1302, 22);  // This register specifically controls the audio suppression strength (in dB) during tuning
     rx.setProperty(0x1303, 4);
     rx.setProperty(0x1304, 32700);
@@ -325,7 +325,7 @@ void useBand(const Band *band)
     rx.setRdsConfig(1, 2, 2, 2, 2);
     rx.setGpioCtl(1, 0, 0);   // G8PTN: Enable GPIO1 as output
     rx.setGpio(0, 0, 0);      // G8PTN: Set GPIO1 = 0
-  }
+}
   else
   {
     // rx.setMaxDelaySetFrequency(80);
