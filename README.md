@@ -12,9 +12,6 @@ Based on the following sources:
 * Goshante:          https://github.com/goshante/ats20_ats_ex
 * G8PTN, Dave:       https://github.com/G8PTN/ATS_MINI
 
-## Releases
-
-Check out the [Releases](https://github.com/esp32-si4732/ats-mini/releases) page.
 
 ## Documentation
 
