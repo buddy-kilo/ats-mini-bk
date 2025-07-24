@@ -284,7 +284,7 @@ void useBand(const Band *band)
     // rx.setTuneFrequencyAntennaCapacitor(0);
     rx.setSeekFmLimits(band->minimumFreq, band->maximumFreq);
 
-    /* FM Tweaks start*/
+    // FM Tweaks start
     rx.setFmStereoOff();   // Some might not like this, but in such a small receiver, stereo isn't needed, in my opinion  
     rx.setProperty(0x1105, 127); // Registers 0x11xx configure thresholds for hard "MONO" mode  
     rx.setProperty(0x1106, 127);
@@ -313,7 +313,7 @@ void useBand(const Band *band)
     rx.setProperty(0x1A04, 1);      
     rx.setProperty(0x1A05, 100);    
     rx.setProperty(0x1A06, 0x0055); // This register allows selecting audio cutoff frequencies 
-    /* FM Tweaks end*/
+    // FM Tweaks end
 
     // More sensitive seek thresholds
     // https://github.com/pu2clr/SI4735/issues/7#issuecomment-810963604
