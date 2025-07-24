@@ -292,27 +292,27 @@ void useBand(const Band *band)
     rx.setProperty(0x1300, 255); // Registers 0x1300 to 0x1305 configure SOFTMUTE mode. My observations: in urban conditions, FM stations are received reliably,  
     rx.setProperty(0x1301, 4);  // and when tuning between stations, there's no characteristic hissing—almost complete silence  
     rx.setProperty(0x1302, 22);  // This register specifically controls the audio suppression strength (in dB) during tuning
-    rx.setProperty(0x1303, 4);      
-    rx.setProperty(0x1304, 32700);  
-    rx.setProperty(0x1305, 32700);  
+    rx.setProperty(0x1303, 4);
+    rx.setProperty(0x1304, 32700);
+    rx.setProperty(0x1305, 32700);
     rx.setProperty(0x1800, 127);  // Registers 0x18xx configure thresholds for hard "MONO" mode
     rx.setProperty(0x1801, 127);
     rx.setProperty(0x1804, 127);
     rx.setProperty(0x1805, 127);
     rx.setProperty(0x1808, 0);
     rx.setProperty(0x1809, 0);
-    rx.setProperty(0x1900, 0);  // Registers 0x19xx control the noise suppressor. Although the SI473x chip isn't officially listed as supported,  
+    rx.setProperty(0x1900, 0);  // Registers 0x19xx control the noise suppressor. Although the SI473x chip isn't officially listed as supported
     rx.setProperty(0x1901, 48);  // I can neither confirm nor deny this. There's no audible difference, but it doesn't interfere. Can be removed if needed.
     rx.setProperty(0x1902, 64);
     rx.setProperty(0x1903, 300);
     rx.setProperty(0x1904, 125);
     rx.setProperty(0x1A00, 1);    // Registers 0x1Axx handle the "cutting" of high-frequency components from the audio signal, which,
-    rx.setProperty(0x1A01, 1);    // in the case of a small speaker in the receiver, provides interesting possibilities for frequency correction. 
+    rx.setProperty(0x1A01, 1);    // in the case of a small speaker in the receiver, provides interesting possibilities for frequency correction.
     rx.setProperty(0x1A02, 10);
-    rx.setProperty(0x1A03, 32760);  
-    rx.setProperty(0x1A04, 1);      
-    rx.setProperty(0x1A05, 100);    
-    rx.setProperty(0x1A06, 0x0055); // This register allows selecting audio cutoff frequencies 
+    rx.setProperty(0x1A03, 32760);
+    rx.setProperty(0x1A04, 1);
+    rx.setProperty(0x1A05, 100);
+    rx.setProperty(0x1A06, 0x0055); // This register allows selecting audio cutoff frequencies
     // FM Tweaks end
 
     // More sensitive seek thresholds
